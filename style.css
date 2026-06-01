@@ -622,7 +622,7 @@ h1 em {
   gap: 6px;
 }
 .card-address::before {
-  content: "📍";
+  /* content: "📍"; */
   flex-shrink: 0;
 }
 
