@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal UPBJJ Universitas Terbuka</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="hero-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="hero-content">
+      <div class="badge">Perguruan Tinggi Negeri Terbuka Jarak Jauh</div>
+
+      <h1>Universitas<br /><em>Terbuka</em></h1>
+
+      <p class="hero-sub">
+        Memberikan layanan pendidikan tinggi berkualitas melalui sistem belajar
+        jarak jauh yang terjangkau dan dapat diakses oleh seluruh lapisan
+        masyarakat Indonesia.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" id="totalCount">0</span>
+          <span class="stat-label">UPBJJ</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">39</span>
+          <span class="stat-label">Provinsi</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Ribu Mahasiswa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      Gulir ke bawah
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TENTANG UT
+       ============================================================ -->
+  <section style="position:relative;z-index:1;">
+    <div class="about">
+
+      <!-- Teks deskripsi -->
+      <div>
+        <p class="section-label">Tentang Kami</p>
+        <h2 class="section-title">Pendidikan Tanpa Batas Ruang dan Waktu</h2>
+        <p class="section-body">
+          Universitas Terbuka (UT) adalah perguruan tinggi negeri ke-45 di Indonesia
+          yang diresmikan pada 4 September 1984. UT menerapkan sistem belajar jarak
+          jauh dan terbuka (SBJJ) sehingga mahasiswa tidak perlu hadir di kampus setiap hari.
+        </p>
+        <p class="section-body">
+          Dengan jaringan Unit Program Belajar Jarak Jauh (UPBJJ) yang tersebar di
+          seluruh wilayah Indonesia, UT hadir melayani masyarakat dari Sabang sampai Merauke.
+        </p>
+      </div>
+
+      <!-- Kartu keunggulan -->
+      <div class="about-cards">
+        <div class="about-card">
+          <div class="about-card-icon">🎓</div>
+          <h4>Program S1 &amp; S2</h4>
+          <p>Berbagai pilihan program studi dari berbagai bidang ilmu.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">💻</div>
+          <h4>Belajar Online</h4>
+          <p>Materi dan tutorial dapat diakses kapan saja dan di mana saja.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">📚</div>
+          <h4>Modul Berkualitas</h4>
+          <p>Materi ajar dirancang oleh para ahli dan akademisi terkemuka.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">🤝</div>
+          <h4>Biaya Terjangkau</h4>
+          <p>Pendidikan berkualitas dengan biaya yang dapat dijangkau semua kalangan.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Garis pemisah -->
+  <div class="divider" style="max-width:1100px;margin:0 auto;"></div>
+
+  <!-- ============================================================
+       UPBJJ — Data & Form
+       ============================================================ -->
+  <section class="upbjj-section">
+
+    <!-- Judul seksi -->
+    <div class="upbjj-header">
+      <p class="section-label">Jaringan Layanan</p>
+      <h2 class="section-title">Unit Program Belajar Jarak Jauh</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;max-width:540px;margin:0 auto;line-height:1.7;">
+        UPBJJ adalah kantor layanan UT yang tersebar di seluruh Indonesia.
+        Setiap UPBJJ melayani mahasiswa di wilayah cakupannya masing-masing.
+      </p>
+    </div>
+
+    <!-- Form tambah UPBJJ -->
+    <div class="upbjj-form">
+      <div class="form-title"><span>+</span> Tambah Data UPBJJ</div>
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="inp-nama">Nama UPBJJ</label>
+          <input type="text" id="inp-nama" placeholder="cth. UPBJJ-UT Banjarmasin" />
+        </div>
+
+        <div class="field">
+          <label for="inp-jalan">Alamat Jalan</label>
+          <input type="text" id="inp-jalan" placeholder="cth. Jl. Brigjen H. Hasan Basri No.9" />
+        </div>
+
+        <div class="field">
+          <label for="inp-tipe">Tipe</label>
+          <select id="inp-tipe">
+            <option value="pusat">UPBJJ Pusat</option>
+            <option value="cabang">UPBJJ Cabang</option>
+            <option value="regional">UPBJJ Regional</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <button class="btn-add" onclick="addUPBJJ()">+ Tambah</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Filter & pencarian -->
+    <div class="filter-bar">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="🔍  Cari nama atau alamat UPBJJ…"
+        oninput="renderCards()"
+      />
+      <div class="filter-chips">
+        <button class="chip active" data-type="all"      onclick="setFilter('all', this)">Semua</button>
+        <button class="chip"        data-type="pusat"    onclick="setFilter('pusat', this)">Pusat</button>
+        <button class="chip"        data-type="cabang"   onclick="setFilter('cabang', this)">Cabang</button>
+        <button class="chip"        data-type="regional" onclick="setFilter('regional', this)">Regional</button>
+      </div>
+    </div>
+
+    <!-- Keterangan jumlah hasil -->
+    <div class="count-bar" id="count-bar"></div>
+
+    <!-- Grid kartu UPBJJ -->
+    <div class="upbjj-grid" id="upbjj-grid"></div>
+
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="footer-logo">Universitas <span>Terbuka</span></div>
+    <p>
+      Jl. Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan, Banten 15418<br />
+      © 2024 Universitas Terbuka. Seluruh hak dilindungi.
+    </p>
+  </footer>
+
+  <!-- ============================================================
+       MODAL EDIT
+       ============================================================ -->
+  <div class="modal-overlay" id="edit-modal">
+    <div class="modal">
+      <h3>Edit Data UPBJJ</h3>
+      <div class="modal-fields">
+
+        <div class="field">
+          <label for="edit-nama">Nama UPBJJ</label>
+          <input type="text" id="edit-nama" placeholder="Nama UPBJJ" />
+        </div>
+
+        <div class="field">
+          <label for="edit-jalan">Alamat Jalan</label>
+          <input type="text" id="edit-jalan" placeholder="Alamat jalan" />
+        </div>
+
+        <div class="field">
+          <label for="edit-tipe">Tipe</label>
+          <select id="edit-tipe">
+            <option value="pusat">UPBJJ Pusat</option>
+            <option value="cabang">UPBJJ Cabang</option>
+            <option value="regional">UPBJJ Regional</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="closeModal()">Batal</button>
+        <button class="btn-save"   onclick="saveEdit()">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notifikasi -->
+  <div class="toast" id="toast"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+
+</body>
+</html>
